@@ -17,6 +17,7 @@ const SocialSection = ({ className, data }) => (
               href={data[key]}
               target="_blank"
               className={style.link}
+              rel="noreferrer"
             >
               {
                 data[key]

@@ -7,8 +7,8 @@ const EducationSection = ({ className, data }) => (
     <SectionHeading heading="education" />
     <div className={style.contentWrapper}>
       {
-      data.map(object => (
-        <Fragment>
+      data.map((object, index) => (
+        <Fragment key={index}>
           <div className={style.universityDetails}>
             <div className={style.city}>{object.city}</div>
             <div className={style.school}>{object.school}</div>
@@ -16,7 +16,7 @@ const EducationSection = ({ className, data }) => (
           </div>
           <ul className={style.otherInfoList}>
             {
-              object.info.map(detail => <li dangerouslySetInnerHTML={{ __html: detail }} />)
+              object.info.map((detail, i) => <li dangerouslySetInnerHTML={{ __html: detail }} key={i + index}/>)
             }
           </ul>
         </Fragment>
