@@ -1,2 +1,2 @@
-# Resume-From-JSON
+# Resume From JSON
 Make your own resume from JSON Data
